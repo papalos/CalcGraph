@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Разбор шаблона Активити-->
+<!-- Важно обратить внимание на вложенность LinearLayout которые в зависимости от
+значения атрибута android:orientation располагают элементы либо один под другим,
+либо в одну строчку. Так же важны атрибуты android:id назначаемый каждому эллементу,
+я у себя поменял размер шрифта на 18 чтобы надписи на кнопках были побольше.
+Андроид Студио ругается на присваивание атрибуту android:text константы ввиде текста
+хочет чтобы мы использовали ссылку на файл string.xml, но мне пофиг-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.example.calc.MainActivity">
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:background="@drawable/cemetery"
+        android:gravity="center_vertical"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:text=""
+        android:textColor="@android:color/holo_green_dark"
+        android:textColorHighlight="@android:color/holo_orange_light"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darckRed"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/plus"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/one"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_1"
+                android:text="@string/one"
+                android:textSize="36sp" />
+
+
+            <Button
+                android:id="@+id/four"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_2"
+                android:text="@string/four"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_1"
+                android:text="@string/seven"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/min"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/min"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/two"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_2"
+                android:text="@string/two"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/five"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_1"
+                android:text="@string/five"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/eight"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_2"
+                android:text="@string/eight"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/mult"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/mul"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/three"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_1"
+                android:text="@string/three"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/six"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_2"
+                android:text="@string/six"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/nine"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_1"
+                android:text="@string/nine"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/div"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/div"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/ziro"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_2"
+                android:text="@string/zero"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/clean"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/butt_1"
+                android:text="@string/clean"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/equal"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@drawable/eq"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
